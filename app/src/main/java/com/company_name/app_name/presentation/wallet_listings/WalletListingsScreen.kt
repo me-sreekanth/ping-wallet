@@ -34,6 +34,9 @@ fun WalletListingsScreen(
             viewModel.onEvent(WalletListingsEvent.Refresh)
         }
     ) {
+
+
+
         LazyColumn(
             modifier = Modifier.fillMaxSize()
         ) {
