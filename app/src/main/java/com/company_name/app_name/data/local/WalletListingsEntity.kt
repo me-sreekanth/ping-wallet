@@ -4,9 +4,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class CompanyListingEntity(
+data class WalletListingsEntity(
     val name: String,
-    val symbol: String,
-    val exchange: String,
+    val address: String,
     @PrimaryKey val id: Int? = null
-)
+) {
+}

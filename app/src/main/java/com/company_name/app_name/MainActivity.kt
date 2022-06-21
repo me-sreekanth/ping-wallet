@@ -15,8 +15,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.company_name.app_name.presentation.NavGraphs
 import com.company_name.app_name.ui.theme.CleanAppNameTheme
+import com.ramcosta.composedestinations.DestinationsNavHost
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,15 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background,
                 ) {
-                    Column(
-                        modifier = Modifier.fillMaxSize()
-                            .background(Color.White),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center
-                    ) {
-                        Text(text = "Clean Arch MVVM", color = Color.Black)
-                    }
-
+                   DestinationsNavHost(navGraph = NavGraphs.root)
                 }
             }
         }
