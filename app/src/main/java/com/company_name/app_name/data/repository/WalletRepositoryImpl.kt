@@ -36,7 +36,7 @@ class WalletRepositoryImpl @Inject constructor(
 
             val remoteListings = try {
                 val response = api.getWalletListings()
-                response.
+//                response.
             } catch(e: IOException) {
                 e.printStackTrace()
                 emit(Resource.Error("Couldn't load data"))
@@ -49,9 +49,9 @@ class WalletRepositoryImpl @Inject constructor(
 
             remoteListings?.let { listings ->
                 dao.clearWalletListings()
-                dao.insertWalletListings(
-                    listings.ma
-                )
+//                dao.insertWalletListings(
+//                    listings.ma
+//                )
 //                dao.insertWalletListings(
 //                    listings.map { it.toCompanyListingEntity() }
 //                )
